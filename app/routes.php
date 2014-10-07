@@ -21,6 +21,8 @@ Route::get('getting-data', function()
 	return View::make('getting-data');
 });
 
+
+//--------------------Getting data from another page
 Route::get('tab1', function()
 {
 	if ( Request::ajax() )
@@ -44,3 +46,5 @@ Route::get('tab2', function()
 		return Response::error('404');
 	}
 });
+
+//----------------------End Getting data from another page
