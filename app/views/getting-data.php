@@ -15,17 +15,24 @@
 <div id="container"></div>
 <script>
   $(function() {
-  $(".tabs").on("click", function(e) { 
-    e.preventDefault();
-  var tab = $(this).attr("id");
-  var title = $(this).html();
-  $("#container").html("loading…");
-  $.get(tab, function(data) {
-  $("#title").html(title);
-  $("#container").html(data);
-});
-});
-});
+      $(".tabs").on("click", function(e) {
+
+          e.preventDefault();
+
+          var tab = $(this).attr("id");
+          var title = $(this).html();
+          $("#container").html("loading…");
+
+          //get ajax data
+          $.get(tab, function(data) {
+
+              //console.log(data);
+
+              $("#title").html(title);
+              $("#container").html(data);
+          });
+      });
+  });
 </script>
 </body>
 </html>
