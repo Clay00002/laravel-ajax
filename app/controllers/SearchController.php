@@ -11,11 +11,11 @@
 	 		return View::make('search.index');
 	 	}
 
-	 	public funciton postSearch()
+	 	public function postSearch()
 	 	{
 			$return = array();
 
-			$iterm = Input::get('term');
+			$term = Input::get('term');
 
 			$books =  array( 
     							array('name' => 'Alice in Wonderland', 'author' => 'Lewis Carroll'), 
@@ -26,7 +26,7 @@
     							array('name' => 'War and Peace', 'author' => 'LeoTolstoy'), 
     						);
 
-    		foreach ($books as $book => $value) 
+    		foreach ($books as $book ) 
     		{
     			if (stripos($book['name'], $term) !== FALSE) $return[] =  $book;
 			}
