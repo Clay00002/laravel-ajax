@@ -54,3 +54,7 @@ Route::get('tab2', function()
 Route::controller('books', 'BooksController');
 
 //----------------------End Setting up a controller to return JSON data
+
+//----------------------Creating an Ajax search function
+Route::controller('search', 'SearchController');
+//----------------------Rnd Creating an Ajax search function
