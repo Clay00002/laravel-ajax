@@ -48,3 +48,9 @@ Route::get('tab2', function()
 });
 
 //----------------------End Getting data from another page
+
+//----------------------Setting up a controller to return JSON data
+
+Route::controller('books', 'BooksController');
+
+//----------------------End Setting up a controller to return JSON data
